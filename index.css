@@ -9,8 +9,7 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: #f0d272;
-
+    background-color: transparent;
 }
 
 .pig { 
@@ -24,24 +23,23 @@
     position: relative;
 }
 
-.eye-first {
-    background-color: rgb(233, 227, 227);
+
+.eye-first,
+.eye-second{
+    background-color: #F8F8FF;
     height: 75px;
     width: 75px;
     position: absolute;
+    border-radius: 100%;
+}
+.eye-first {
     left: 100px;
     bottom: 230px;
-    border-radius: 100%;
 }
 
 .eye-second {
-    background-color: rgb(233, 227, 227);
-    height: 75px;
-    width: 75px;
-    position: absolute;
     right: 100px;
     bottom: 230px;
-    border-radius: 100%;
 }
 
 .nose {
@@ -75,13 +73,26 @@
     left: 120px
 }
 
-.ear-first {
+.ear-first,
+.ear-second{
     position: absolute;
     width: 200px;
     height: 200px;
-    background-color: blue;
+    background-color: #f8b5ba;
     top: -100px;
-    transform: translate(-30px, -50px) rotate(26deg) skew(60deg);
+    border: 30px solid #F7949A;
+    border-radius:60px;
+    z-index: -1;
+    margin-top: 150px;
 }
 
-/* Sobre animações em css: https://www.youtube.com/watch?v=eTELLTacg- */
+.ear-first{
+    transform: translate(-30px, -50px) rotate(26deg) skew(40deg);
+    margin-right: 310px;
+}
+
+.ear-second{
+    transform: translate(30px, -50px) rotate(-26deg) skew(-40deg);
+    margin-left: 310px;
+}
+/* Sobre animações em css: https://www.youtube.com/watch?v=e00000000000000000TELLTacg-8 */
