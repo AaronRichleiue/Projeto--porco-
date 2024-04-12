@@ -16,7 +16,7 @@
     background-color: #F7949A;
     width: 500px;
     height: 500px;
-    border-radius: 100%;
+    border-radius: 46%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +41,8 @@
     right: 100px;
     bottom: 230px;
 }
+
+fisrt-pupil,
 
 .nose {
     height: 150px;
@@ -94,5 +96,32 @@
 .ear-second{
     transform: translate(30px, -50px) rotate(-26deg) skew(-40deg);
     margin-left: 310px;
+}
+
+.aleatorio{
+    animation-name: giro;
+    animation-duration: 10s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes giro {
+    0%{
+    transform: rotate(0);
+    background-color: red;
+    height: 600px;
+    width: 200px;
+    }
+    50% {
+    background-color: blue;
+    height: 400px;
+    width: 100px;
+    }
+    100% {
+    transform: rotate(-360deg);
+    background-color: yellow;
+    height: 200px;
+    width: 50px;
+    }
 }
 /* Sobre animações em css: https://www.youtube.com/watch?v=e00000000000000000TELLTacg-8 */
