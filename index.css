@@ -31,6 +31,11 @@
     width: 75px;
     position: absolute;
     border-radius: 100%;
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 .eye-first {
     left: 100px;
@@ -42,7 +47,25 @@
     bottom: 230px;
 }
 
-fisrt-pupil,
+.first-pupil,
+.second-pupil{
+    position: absolute;
+    background-color: #000;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.first-pupil{
+    left: 35px;
+    bottom: 35px;
+}
+
+.second-pupil{
+    right: 35px;
+    bottom: 35px;
+}
 
 .nose {
     height: 150px;
@@ -98,30 +121,45 @@ fisrt-pupil,
     margin-left: 310px;
 }
 
+@keyframes blink {
+    to {
+        transform: scaleY(0);
+    }
+}
+ 
+
 .aleatorio{
     animation-name: giro;
-    animation-duration: 10s;
-    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 @keyframes giro {
-    0%{
+    from{
     transform: rotate(0);
     background-color: red;
     height: 600px;
     width: 200px;
+    }
+
+    25% {
+        background-color: black;
+        height: 50px;
+        width: 300px;
     }
     50% {
     background-color: blue;
     height: 400px;
     width: 100px;
     }
-    100% {
+
+    to {
     transform: rotate(-360deg);
     background-color: yellow;
     height: 200px;
     width: 50px;
     }
-}
+}  
 /* Sobre animações em css: https://www.youtube.com/watch?v=e00000000000000000TELLTacg-8 */
