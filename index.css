@@ -74,9 +74,6 @@
     border-radius: 100%;
     margin-top: 150px;
     position: relative;
-    /* position:absolute;
-    bottom: 100px;
-    left: 160px; */
 }
 
 .nostril-second,
@@ -152,6 +149,7 @@
     }
     50% {
     background-color: blue;
+    border-radius: 50%;
     height: 500px;
     width: 300px;
     }
@@ -189,7 +187,7 @@
 
 @keyframes slue {
     to {
-       transform-origin: center;
+       /* transform-origin: center; */
        transform: scaleX(0);
     }
 }
