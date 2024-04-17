@@ -130,7 +130,7 @@
 
 .aleatorio{
     animation-name: giro;
-    animation-duration: 1s;
+    animation-duration: 5s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -138,28 +138,59 @@
 
 @keyframes giro {
     from{
+    transform-origin: center;
     transform: rotate(0);
     background-color: red;
-    height: 600px;
-    width: 200px;
+    height: 800px;
+    width: 400px;
     }
 
     25% {
         background-color: black;
-        height: 50px;
-        width: 300px;
+        height: 200px;
+        width: 600px;
     }
     50% {
     background-color: blue;
-    height: 400px;
-    width: 100px;
+    height: 500px;
+    width: 300px;
     }
 
     to {
     transform: rotate(-360deg);
     background-color: yellow;
-    height: 200px;
-    width: 50px;
+    height: 400px;
+    width: 100px;
     }
 }  
+
+.eye-first-money-cipher,
+.eye-second-money-cipher{
+    height: 128px;
+    width: 128px;
+    position: absolute;
+    border-radius: 100%;
+    margin: auto;
+    animation-name: slue;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.eye-first-money-cipher {
+    left: 70px;
+    bottom: 220px;
+}
+
+.eye-second-money-cipher {
+    right: 70px;
+    bottom: 220px;
+}
+
+@keyframes slue {
+    to {
+       transform-origin: center;
+       transform: scaleX(0);
+    }
+}
 /* Sobre animações em css: https://www.youtube.com/watch?v=e00000000000000000TELLTacg-8 */
